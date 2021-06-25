@@ -42,23 +42,23 @@ const AddServices = () => {
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
-            <div className="col-md-10 p-4 pr-5 no-gutter" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
+            <div className="col-md-10 p-4 pr-5 no-gutter" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" , height: '100vh'}}>
                 <h5 className="text-primary">Add a New Service</h5>
                 <form onSubmit={handleSubmit} >
                     <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">Service Title</label>
+                        <label htmlFor="exampleInputServiceTitle">Service Title</label>
                         <input onBlur={handleBlur} type="text" className="form-control" name="title" placeholder="Service Title" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Description</label>
+                        <label htmlFor="exampleInputDescription">Description</label>
                         <input style={{height: '100px'}} onBlur={handleBlur} type="text" className="form-control" name="description" placeholder="" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Service Charge</label>
+                        <label htmlFor="exampleInputCharge">Service Charge</label>
                         <input onBlur={handleBlur} type="text" className="form-control" name="charge" placeholder="Service Charge" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="service image">Upload a image</label>
+                        <label htmlFor="serviceImage">Upload a image</label>
                         <input onChange={handleFileChange} type="file" className="form-control" id="exampleInputPassword1" placeholder="Upload Picture" />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>

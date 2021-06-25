@@ -13,6 +13,8 @@ import BookService from './components/Dashboard/BookService/BookService';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import BookingList from './components/Dashboard/BookingList/BookingList';
 import AddReview from './components/Dashboard/AddReview/AddReview';
+import AllBookings from './components/AllBookings/AllBookings';
+import MakeAdmin from './components/MakeAdmin/MakeAdmin';
 
 export const UserContext = createContext();
 
@@ -30,23 +32,29 @@ function App() {
           <Route exact path='/home'>
             <Home></Home>
           </Route>
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
           <Route path='/dashboard'>
             <Dashboard></Dashboard>
           </Route>
           <Route path='/addServices'>
             <AddServices></AddServices>
           </Route>
-          <Route path='/login'>
-            <Login></Login>
-          </Route>
           <PrivateRoute path='/serviceCheckout/:serviceId'>
             <BookService />
           </PrivateRoute>
-          <Route path = '/bookingList'>
+          <PrivateRoute path = '/bookingList'>
             <BookingList />
-          </Route>
-          <Route path = '/addReview'>
+          </PrivateRoute>
+          <PrivateRoute path = '/addReview'>
             <AddReview />
+          </PrivateRoute>
+          <Route path = '/allBookings'>
+            <AllBookings />
+          </Route>
+          <Route path = '/makeAdmin'>
+            <MakeAdmin />
           </Route>
         </Switch>
       </Router>

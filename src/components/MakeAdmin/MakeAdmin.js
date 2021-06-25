@@ -28,7 +28,7 @@ const MakeAdmin = () => {
             .then(response => response.json())
             .then(data => {
                 if (data) {
-                    alert('You have admin access now')
+                    alert('Admin Access Given to New Email')
                 }
             })
             .catch(error => {

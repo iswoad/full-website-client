@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Car-repair Service React App
+This is a car repair service website for booking service appointment.
+## Key Features
+# Admin Panel
+1. Can create or add new services for customers which dynamically shows on the home page.
+2. See all the appointments/bookings booked by the clients for perticular service
+3. Can give access to new admin to access the admin panel.
+4. Manage the services.
+5. Can change service status.
+
+# Client/customers 
+
+1. Can book a service.
+2. See the services booked for.
+3. Can add a review which dynamically shows on the home page.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

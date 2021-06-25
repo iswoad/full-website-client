@@ -3,7 +3,7 @@ import featured from '../../../images/qa section.jpg'
 import stats from '../../../images/stats.JPG'
 const FeaturedService = () => {
     return (
-        <section className="features-service pb-0 pb-md-5 my-5 py-5">
+        <section className="features-service pb-0 pb-md-5 my-5 py-5" id="whyUs">
             <div className="container mb-5">
                 <div className="row mb-5">
                     <div className="col-md-5 mb-4 m-md-0">

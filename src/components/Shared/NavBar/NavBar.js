@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import navLogo from '../../../images/logo.png';
 
 const Navbar = () => {
@@ -16,16 +17,16 @@ const Navbar = () => {
                         <Link style = {{color: 'white'}} className="nav-link ms-5" to="/home">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link style = {{color: 'white'}}  className="nav-link ms-5" to="/login">About Us</Link>
+                        <HashLink style = {{color: 'white'}}  className="nav-link ms-5" smooth to="#whyUs">Why Us</HashLink>
                     </li>
                     <li className="nav-item">
-                        <Link style = {{color: 'white'}} className="nav-link ms-5" to="/service">Services</Link>
+                        <HashLink style = {{color: 'white'}} className="nav-link ms-5" smooth to="#services">Services</HashLink>
                     </li>
                     <li className="nav-item">
                         <Link style = {{color: 'white'}} className="nav-link ms-5" to="/dashboard">Dashboard</Link>
                     </li>
                     <li className="nav-item">
-                        <Link style = {{color: 'white'}} className="nav-link ms-5" to="#">Blogs</Link>
+                        <HashLink style = {{color: 'white'}} className="nav-link ms-5" smooth to="#blogs">Blogs</HashLink>
                     </li>
                     <li className="nav-item">
                         <Link style = {{color: 'white'}} className="nav-link ms-5" to="/login">Login</Link>

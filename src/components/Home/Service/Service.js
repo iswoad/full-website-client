@@ -28,7 +28,7 @@ const Services = () => {
 
     return (
         <section>
-            <div className ="text-center mt-5">
+            <div className ="text-center mt-5" id="services">
                 <h1 style = {{color: '#3A3A3A'}}><strong>WHAT WE DO</strong></h1>
                 <h3 className = 'text-secondary mt-5'>We offer full service auto repair and maintenance</h3>
             </div>

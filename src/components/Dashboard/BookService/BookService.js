@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { UserContext } from '../../../App';
+import ProcessPayment from '../../ProcessPayment/ProcessPayment';
 import Sidebar from '../Sidebar/Sidebar';
 
 const BookService = () => {
@@ -51,8 +52,11 @@ const BookService = () => {
                     <h2><span className = 'text-success'>Ordered Service: </span> {title}</h2>
                     <h2><span className = 'text-success'>Service Fee </span>  {charge}$</h2>
                 </div>
+                <div>
+                    <ProcessPayment></ProcessPayment>
+                </div>
                 <div className="col-auto">
-                    <button onClick = {handleCheckOut} className= "btn btn-danger">Make Payment</button>
+                    <button onClick = {handleCheckOut} className= "btn btn-danger">Proceed</button>
                 </div>
             </div>
         </section>

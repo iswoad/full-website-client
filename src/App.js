@@ -1,24 +1,56 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/Home/Home';
+import React, { createContext, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import AddServices from './components/AddServices/AddServices';
+import Login from './components/Login/Login/Login';
+import BookService from './components/Dashboard/BookService/BookService';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import BookingList from './components/Dashboard/BookingList/BookingList';
+import AddReview from './components/Dashboard/AddReview/AddReview';
+
+export const UserContext = createContext();
 
 function App() {
+
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Home></Home>
+          </Route>
+          <Route exact path='/home'>
+            <Home></Home>
+          </Route>
+          <Route path='/dashboard'>
+            <Dashboard></Dashboard>
+          </Route>
+          <Route path='/addServices'>
+            <AddServices></AddServices>
+          </Route>
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
+          <PrivateRoute path='/serviceCheckout/:serviceId'>
+            <BookService />
+          </PrivateRoute>
+          <Route path = '/bookingList'>
+            <BookingList />
+          </Route>
+          <Route path = '/addReview'>
+            <AddReview />
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 

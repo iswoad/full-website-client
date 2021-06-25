@@ -1,0 +1,9 @@
+.header-container {
+    height:100vh;
+    position:relative;
+    background-image: url('../../../images/muscular-car-service-worker-repairing-vehicle.jpg');
+    background-size: cover;
+    /* filter: grayscale(200%); */
+   
+}
+

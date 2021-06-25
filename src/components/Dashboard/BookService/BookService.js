@@ -13,7 +13,7 @@ const BookService = () => {
     // selected service fetch
 
     useEffect(() => {
-        fetch(`http://localhost:4200/service/${serviceId}`)
+        fetch(`https://obscure-coast-47733.herokuapp.com/service/${serviceId}`)
             .then(res => res.json())
             .then(data => setSelectedService(data));
     }, [serviceId])
@@ -27,7 +27,7 @@ const BookService = () => {
 
         //send order details and login info to server
 
-        fetch('http://localhost:4200/addBooking', {
+        fetch('https://obscure-coast-47733.herokuapp.com/addBooking', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -1,27 +1,11 @@
 import React, { useEffect, useState } from 'react';
-// import commonRepair from '../../../images/most common repairs.jpg';
-// import brakeService from '../../../images/brake service.jpg';
-// import maintenance from '../../../images/preventative maintenance.jpg';
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
-// const serviceData = [
-//     {
-//         name: 'Common Repair',
-//         img: commonRepair
-//     },
-//     {
-//         name: 'Brake Repair & Services',
-//         img: brakeService
-//     },
-//     {
-//         name: 'Preventative Maintenance',
-//         img: maintenance
-//     }
-// ]
+
 
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect( () => {
-        fetch('http://localhost:4200/services')
+        fetch('https://obscure-coast-47733.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     }, [])

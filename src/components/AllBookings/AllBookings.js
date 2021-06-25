@@ -8,7 +8,7 @@ const AllBookings = () => {
 
     const [ bookings, setBookings ] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4200/allBookings')
+        fetch('https://obscure-coast-47733.herokuapp.com/allBookings')
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [])
